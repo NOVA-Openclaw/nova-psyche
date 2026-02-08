@@ -163,6 +163,19 @@ Factors in weighting calculation:
 7. How do we handle confidence decay over time?
 8. Privacy boundaries — what should NOVA track vs. not track?
 
+## Research Tasks
+
+- [ ] **Mood Inference in AI-User Interactions** — Search online for recent/current mood inference ranking approaches in AI-User interactions. What methods exist? How are they evaluated?
+
+- [ ] **Mood Schema Dynamic Reflection** — Search online for recent/current best practices and approaches for mood trait/schema dynamic reflection and performance in AI character personalities. How do AI characters adapt their mood in response to user state?
+
+- [ ] **Theory of Mind / Theory of Self** — Search online for recent/current philosophical, sociological, and psychological research on:
+  - Development of self-concept and identity
+  - Identity reinforcement mechanisms
+  - Perspective framing with critique and judgment
+  - Constructive critique methodologies for developing or modeling new behaviors or habits
+  - How these concepts apply to AI agents
+
 ## Next Steps
 
 - [ ] Define initial trait dimensions and scales
@@ -172,6 +185,7 @@ Factors in weighting calculation:
 - [ ] Draft user profile schema (tables/fields)
 - [ ] Define confidence scoring algorithm
 - [ ] Map longitudinal analysis approach
+- [ ] Complete research tasks above and synthesize findings
 
 ---
 
