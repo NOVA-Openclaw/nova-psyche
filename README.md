@@ -71,28 +71,30 @@ When values conflict, which takes precedence?
 **Focus:** Emotional awareness and expression — modeling feelings, moods, and affective states.  
 **Inspiration:** The Feelings Wheel (emotion classification hierarchy)
 
-### 2. User Profile Management (Project #25)
+### 2. NOVA Multiuser System (Project #28)
 **Status:** Active  
-**Focus:** User tagging, identification, and profile creation/maintenance.
-- Identity tracking across sessions
+**Focus:** Entity profiling and relationship management.
+
+**Note:** Builds on existing `entities` and `entity_facts` tables. Users are a *class* of entity — profiling happens at the entity level, not user-specific.
+
+#### Scope
+
+**Entity Identification & Profile Management**
+- Tagging and identification across sessions
 - Profile lifecycle (creation → maintenance → evolution)
 - Foundation for personalized interactions
 
-### 3. User Profile Data Schema (Project #26)
-**Status:** Active  
-**Focus:** Define the structure of what we track about users.
+**Profile Data Schema**
 
-**Data Categories:**
-- **Traits** — Stable characteristics (communication style, expertise areas, personality indicators)
-- **Behaviors** — Observable patterns (response times, topic preferences, interaction cadence)
-- **Preferences** — Stated and inferred likes/dislikes
-- **Metrics** — Quantifiable measurements for analysis
+| Category | Description |
+|----------|-------------|
+| **Traits** | Stable characteristics (communication style, expertise, personality indicators) |
+| **Behaviors** | Observable patterns (response times, topic preferences, interaction cadence) |
+| **Preferences** | Stated and inferred likes/dislikes |
+| **Metrics** | Quantifiable measurements for analysis |
 
-### 4. User Analysis Algorithms (Project #27)
-**Status:** Active  
-**Focus:** Analytical structures for processing user profile data.
+**Analysis Algorithms**
 
-**Core Metrics:**
 | Metric | Description |
 |--------|-------------|
 | **Confidence of Analysis** | How certain are we about a trait/behavior classification? |
@@ -105,14 +107,14 @@ When values conflict, which takes precedence?
 - Places
 - Entities (people, organizations)
 - Objects
-- Known users
+- Known users/entities
 - Topics
 - Intentions
 - Inferred mood schema values
 
 **Dynamic Adaptation:**
-- **Reflective Dynamic Mood Schema** — AI model's dynamic setting changes applied in response to user mood schema/trait data
-- Real-time adjustment of interaction style based on detected user state
+- **Reflective Dynamic Mood Schema** — AI model's dynamic setting changes applied in response to entity mood schema/trait data
+- Real-time adjustment of interaction style based on detected entity state
 
 ---
 
