@@ -1,0 +1,63 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+*~
+*.swp
+*.swo
+.vscode/
+.idea/
+*.sublime-*
+
+# Logs
+*.log
+logs/
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Node modules (if any)
+node_modules/
+npm-debug.log*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+
+# IDE files
+*.iml
+*.iws
+.project
+.classpath
+.settings/
+
+# System files
+*.orig# Security - never commit these
+*.pem
+*.key
+.htpasswd
+.htaccess
+credentials.json
+secrets.json
+service-account*.json
+**/id_rsa
+**/id_ed25519
