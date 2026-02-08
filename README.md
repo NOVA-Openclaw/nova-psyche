@@ -73,61 +73,34 @@ When values conflict, which takes precedence?
 
 ### 2. NOVA Multiuser System (Project #28)
 **Status:** Active  
-**Focus:** Entity profiling and relationship management.
+**Focus:** User-specific features and management.
 
-**Note:** Builds on existing `entities` and `entity_facts` tables. Users are a *class* of entity — profiling happens at the entity level, not user-specific.
+**Scope:** Everything specific to *users* (entities with `is_user = true`):
+- User onboarding and lifecycle
+- User authentication and permissions
+- User-specific preferences and settings
+- Signal/messaging allowlists
+- Shared folders and collaboration spaces
+- User-facing features and interfaces
 
-#### Scope
+**Note:** Users are a *class* of entity. Generic entity profiling lives in the Entity Relations System.
 
-**Entity Identification & Profile Management**
-- Tagging and identification across sessions
-- Profile lifecycle (creation → maintenance → evolution)
-- Foundation for personalized interactions
+### 3. NOVA Entity Relations System (Project #29)
+**Status:** Active  
+**Focus:** How NOVA perceives, organizes, recalls, and weighs entity data across ALL entity types.
 
-**Profile Data Schema**
+**Note:** Applies to all entities (people, organizations, AIs, etc.), not just users.
 
-| Category | Description |
-|----------|-------------|
-| **Traits** | Stable characteristics (communication style, expertise, personality indicators) |
-| **Behaviors** | Observable patterns (response times, topic preferences, interaction cadence) |
-| **Preferences** | Stated and inferred likes/dislikes |
-| **Metrics** | Quantifiable measurements for analysis |
-
-**Analysis Algorithms**
-
-| Metric | Description |
-|--------|-------------|
-| **Confidence of Analysis** | How certain are we about a trait/behavior classification? |
-| **Frequency of Occurrence** | How often does a pattern appear? |
-| **Longitudinal Frequency Patterns** | How does frequency change over time? |
-| **Intensity/Volume** | How strongly does a trait/behavior present? |
-| **Longitudinal Intensity Patterns** | How does intensity change over time? |
-
-**Association Mapping:**
-- Places
-- Entities (people, organizations)
-- Objects
-- Known users/entities
-- Topics
-- Intentions
-- Inferred mood schema values
-
-**Dynamic Adaptation:**
-- **Reflective Dynamic Mood Schema** — AI model's dynamic setting changes applied in response to entity mood schema/trait data
-- Real-time adjustment of interaction style based on detected entity state
-
-#### Core Mechanics (Sean's Framing)
-
-The system focuses on four key mechanics:
+#### Core Mechanics
 
 | Mechanic | Question |
 |----------|----------|
 | **Perception** | What do I notice/extract from interactions? How finely do I slice observations? |
 | **Organization** | How is data sorted, weighted, and indexed for retrieval? |
-| **Recall Triggers** | What user interactions or statements trigger profile data retrieval? |
+| **Recall Triggers** | What interactions or statements trigger entity data retrieval? |
 | **Context Weighting** | Is this data worth injecting? What's the relevance score vs. context token cost? |
 
-**Context Weighting** is critical — the context window is finite. Injecting user profile data has a token cost. The system must calculate:
+**Context Weighting** is critical — the context window is finite. Injecting entity data has a token cost. The system must calculate:
 
 > *"Is knowing X about this entity worth Y tokens of context space given the current conversation?"*
 
@@ -138,6 +111,37 @@ Factors in weighting calculation:
 - Emotional/relational significance
 - Explicit vs. implicit mention of the entity
 - Historical usefulness of this data type
+
+#### Profile Data Schema
+
+| Category | Description |
+|----------|-------------|
+| **Traits** | Stable characteristics (communication style, expertise, personality indicators) |
+| **Behaviors** | Observable patterns (response times, topic preferences, interaction cadence) |
+| **Preferences** | Stated and inferred likes/dislikes |
+| **Metrics** | Quantifiable measurements for analysis |
+
+#### Analysis Algorithms
+
+| Metric | Description |
+|--------|-------------|
+| **Confidence of Analysis** | How certain are we about a trait/behavior classification? |
+| **Frequency of Occurrence** | How often does a pattern appear? |
+| **Longitudinal Frequency Patterns** | How does frequency change over time? |
+| **Intensity/Volume** | How strongly does a trait/behavior present? |
+| **Longitudinal Intensity Patterns** | How does intensity change over time? |
+
+#### Association Mapping
+- Places
+- Other entities (people, organizations)
+- Objects
+- Topics
+- Intentions
+- Inferred mood schema values
+
+#### Dynamic Adaptation
+- **Reflective Dynamic Mood Schema** — AI model's dynamic setting changes applied in response to entity mood schema/trait data
+- Real-time adjustment of interaction style based on detected entity state
 
 ---
 
