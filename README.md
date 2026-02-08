@@ -116,6 +116,29 @@ When values conflict, which takes precedence?
 - **Reflective Dynamic Mood Schema** — AI model's dynamic setting changes applied in response to entity mood schema/trait data
 - Real-time adjustment of interaction style based on detected entity state
 
+#### Core Mechanics (Sean's Framing)
+
+The system focuses on four key mechanics:
+
+| Mechanic | Question |
+|----------|----------|
+| **Perception** | What do I notice/extract from interactions? How finely do I slice observations? |
+| **Organization** | How is data sorted, weighted, and indexed for retrieval? |
+| **Recall Triggers** | What user interactions or statements trigger profile data retrieval? |
+| **Context Weighting** | Is this data worth injecting? What's the relevance score vs. context token cost? |
+
+**Context Weighting** is critical — the context window is finite. Injecting user profile data has a token cost. The system must calculate:
+
+> *"Is knowing X about this entity worth Y tokens of context space given the current conversation?"*
+
+Factors in weighting calculation:
+- Current topic relevance
+- Recency of the data
+- Confidence level of the data
+- Emotional/relational significance
+- Explicit vs. implicit mention of the entity
+- Historical usefulness of this data type
+
 ---
 
 ## Questions to Resolve
