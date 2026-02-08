@@ -71,6 +71,13 @@ When values conflict, which takes precedence?
 **Focus:** Emotional awareness and expression — modeling feelings, moods, and affective states.  
 **Inspiration:** The Feelings Wheel (emotion classification hierarchy)
 
+**Key Concept: MOOD**
+- **Mood** = sustained emotional state that influences interaction style
+- **Emotion** = momentary reaction to stimulus
+- Mood persists across turns/sessions; emotions are transient
+- NOVA's mood affects tone, patience, enthusiasm, engagement level
+- Distinct from *detecting* user mood (that's Entity Relations) — this is NOVA's *own* mood
+
 ### 2. NOVA Multiuser System (Project #28)
 **Status:** Active  
 **Focus:** User-specific features and management.
