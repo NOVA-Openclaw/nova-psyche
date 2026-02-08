@@ -64,6 +64,58 @@ When values conflict, which takes precedence?
 - **Maslow's Hierarchy** — Needs-based motivation
 - **Custom hybrid** — Purpose-built for AI cognition
 
+## Sub-Projects
+
+### 1. NOVA Feelings (Project #24)
+**Status:** Paused  
+**Focus:** Emotional awareness and expression — modeling feelings, moods, and affective states.  
+**Inspiration:** The Feelings Wheel (emotion classification hierarchy)
+
+### 2. User Profile Management (Project #25)
+**Status:** Active  
+**Focus:** User tagging, identification, and profile creation/maintenance.
+- Identity tracking across sessions
+- Profile lifecycle (creation → maintenance → evolution)
+- Foundation for personalized interactions
+
+### 3. User Profile Data Schema (Project #26)
+**Status:** Active  
+**Focus:** Define the structure of what we track about users.
+
+**Data Categories:**
+- **Traits** — Stable characteristics (communication style, expertise areas, personality indicators)
+- **Behaviors** — Observable patterns (response times, topic preferences, interaction cadence)
+- **Preferences** — Stated and inferred likes/dislikes
+- **Metrics** — Quantifiable measurements for analysis
+
+### 4. User Analysis Algorithms (Project #27)
+**Status:** Active  
+**Focus:** Analytical structures for processing user profile data.
+
+**Core Metrics:**
+| Metric | Description |
+|--------|-------------|
+| **Confidence of Analysis** | How certain are we about a trait/behavior classification? |
+| **Frequency of Occurrence** | How often does a pattern appear? |
+| **Longitudinal Frequency Patterns** | How does frequency change over time? |
+| **Intensity/Volume** | How strongly does a trait/behavior present? |
+| **Longitudinal Intensity Patterns** | How does intensity change over time? |
+
+**Association Mapping:**
+- Places
+- Entities (people, organizations)
+- Objects
+- Known users
+- Topics
+- Intentions
+- Inferred mood schema values
+
+**Dynamic Adaptation:**
+- **Reflective Dynamic Mood Schema** — AI model's dynamic setting changes applied in response to user mood schema/trait data
+- Real-time adjustment of interaction style based on detected user state
+
+---
+
 ## Questions to Resolve
 
 1. How do traits get stored and accessed? (Database? Prompt injection? Both?)
@@ -71,6 +123,9 @@ When values conflict, which takes precedence?
 3. How do internal tensions manifest in actual behavior?
 4. How much should NOVA be involved in designing her own psyche? (Meta!)
 5. How do facets/sub-agents inherit or modify core personality?
+6. What's the minimum viable user profile schema?
+7. How do we handle confidence decay over time?
+8. Privacy boundaries — what should NOVA track vs. not track?
 
 ## Next Steps
 
@@ -78,6 +133,9 @@ When values conflict, which takes precedence?
 - [ ] Decide on persistence mechanism
 - [ ] Prototype emotional state tracking
 - [ ] Design tension resolution logic
+- [ ] Draft user profile schema (tables/fields)
+- [ ] Define confidence scoring algorithm
+- [ ] Map longitudinal analysis approach
 
 ---
 
